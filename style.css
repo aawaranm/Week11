@@ -1,0 +1,244 @@
+/* Reset and global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+  line-height: 1.6;
+  padding: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Header styling */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: #0f172a;
+  margin-bottom: 5px;
+}
+
+header p {
+  color: #64748b;
+  font-size: 1rem;
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+  margin-top: 12px;
+  padding: 8px 16px;
+  background-color: #1e293b;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#theme-toggle:hover {
+  background-color: #334155;
+}
+
+/* Flexbox Navigation Menu */
+.nav-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #1e293b;
+  padding: 14px 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.nav-menu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.nav-menu a:hover {
+  color: #38bdf8;
+}
+
+/* Flexbox Content Wrapper (Side-by-Side Cards) */
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: stretch;
+  margin-bottom: 30px;
+}
+
+/* Card Styling */
+.card {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+}
+
+.card h2, #contact h2 {
+  font-size: 1.4rem;
+  color: #0f172a;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 8px;
+}
+
+.card p {
+  margin-bottom: 12px;
+  color: #334155;
+}
+
+.card a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* Profile Image Styling */
+.profile-img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* Contact / Leave a Message Form Section */
+#contact {
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  margin-bottom: 30px;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#contact label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+#contact input,
+#contact textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+#contact button {
+  align-self: flex-start;
+  background-color: #1e293b;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#contact button:hover {
+  background-color: #334155;
+}
+
+#contact p {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #64748b;
+  font-style: italic;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #e2e8f0;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+}
+
+/* ==========================================
+   Dark Mode Styles (Triggered by JavaScript)
+   ========================================== */
+body.dark-mode {
+  background-color: #0f172a;
+  color: #f1f5f9;
+}
+
+body.dark-mode h1,
+body.dark-mode .card h2,
+body.dark-mode #contact h2 {
+  color: #f8fafc;
+}
+
+body.dark-mode header p,
+body.dark-mode .card p,
+body.dark-mode #contact label,
+body.dark-mode #contact p,
+body.dark-mode footer {
+  color: #cbd5e1;
+}
+
+body.dark-mode .card,
+body.dark-mode #contact {
+  background-color: #1e293b;
+  border-color: #334155;
+}
+
+body.dark-mode #contact input,
+body.dark-mode #contact textarea {
+  background-color: #0f172a;
+  color: #f8fafc;
+  border-color: #334155;
+}
+
+body.dark-mode #theme-toggle {
+  background-color: #38bdf8;
+  color: #0f172a;
+}
+
+body.dark-mode #theme-toggle:hover {
+  background-color: #7dd3fc;
+}
