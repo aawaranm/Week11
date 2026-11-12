@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aawaran Manandhar - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Aawaran Manandhar's Portfolio</h1>
+        <p>Personal Profile Page with DOM & Event Handling</p>
+        <!-- Week 11: Dark Mode Toggle Button -->
+        <button id="theme-toggle" type="button">🌙 Toggle Dark Mode</button>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav class="nav-menu" aria-label="Main navigation">
+        <a href="#about">About Me</a>
+        <a href="#profile">Profile</a>
+        <a href="#skills">Skills & Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+        <!-- Content Wrapper Layout (Side-by-Side Cards) -->
+        <div class="content-wrapper">
+            
+            <section class="card" id="about">
+                <h2>Introduction</h2>
+                <p>Hello! I am Aawaran Manandhar. I am 20 years old and passionate about building responsive, modern websites using HTML, CSS, and JavaScript.</p>
+                <p>Check your browser's Developer Console (F12) for interactive JavaScript greetings and age calculations!</p>
+            </section>
+
+            <section class="card" id="profile">
+                <h2>My Profile</h2>
+                <!-- Profile Image -->
+                <img src="profile.jpg" alt="Aawaran Manandhar profile photo" class="profile-img">
+                <p><strong>Name:</strong> Aawaran Manandhar</p>
+                <p><strong>Email:</strong> <a href="mailto:aawaranm@gmail.com">aawaranm@gmail.com</a></p>
+                <p><strong>Phone:</strong> <a href="tel:01059374851">01059374851</a></p>
+                <p>I enjoy web engineering, software design, and building creative web apps.</p>
+            </section>
+
+        </div>
+
+        <!-- NEW ADDED SECTION: Skills & Projects -->
+        <section class="card" id="skills" style="margin-bottom: 30px;">
+            <h2>Skills & Projects</h2>
+            <p><strong>Core Technologies:</strong> HTML5, CSS3, JavaScript, Flexbox, Responsive Design</p>
+            <p><strong>Current Project:</strong> Developing a cumulative web portfolio featuring dynamic DOM event handling, dark mode toggles, and clean layouts.</p>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section id="contact">
+            <h2>Leave a Message</h2>
+            <form>
+                <label for="visitor-name">Name</label>
+                <input id="visitor-name" type="text" placeholder="Your name">
+                
+                <label for="visitor-email">Email</label>
+                <input id="visitor-email" type="email" placeholder="Your email">
+                
+                <label for="visitor-message">Message</label>
+                <textarea id="visitor-message" rows="5" placeholder="Your message"></textarea>
+                
+                <button type="button">Send Message (Layout Demo)</button>
+            </form>
+            <p>This form demonstrates HTML layout; it does not send messages.</p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2026 Aawaran Manandhar | My cumulative web portfolio</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
