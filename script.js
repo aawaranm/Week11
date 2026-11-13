@@ -1,31 +1,33 @@
-// --- PART 1: Time-based Greeting ---
+// --- Week 10: Existing Greeting & Age Calculation ---
 let userName = "Aawaran Manandhar";
 let currentHour = new Date().getHours();
 
 if (currentHour < 12) {
-    console.log(`Good morning, ${userName}!`);
+  console.log("Good morning, " + userName + "!");
 } else if (currentHour < 18) {
-    console.log(`Good afternoon, ${userName}!`);
+  console.log("Good afternoon, " + userName + "!");
 } else {
-    console.log(`Good evening, ${userName}!`);
+  console.log("Good evening, " + userName + "!");
 }
 
-
-// --- PART 2: Age and Days Lived Verification ---
-let age = 20; // Age: 20 yrs
+let birthYear = 2006; // 20 years old in 2026
+let age = 2026 - birthYear;
 let daysLived = age * 365;
-console.log(`You have lived for approximately ${daysLived} days!`);
+
+console.log("You have lived for approximately " + daysLived + " days!");
 
 if (age >= 18) {
-    console.log("You are an adult.");
+  console.log("You are an adult.");
 } else {
-    console.log("You are a minor.");
+  console.log("You are a minor.");
 }
 
+// --- Week 11: Dark Mode Toggle ---
+const themeBtn = document.querySelector("#theme-toggle") || document.querySelector(".theme-toggle");
 
-// --- PART 3: Week 11 DOM & Dynamic Event Handling ---
-const themeButton = document.querySelector('#theme-toggle');
-
-themeButton.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-});
+if (themeBtn) {
+  themeBtn.addEventListener("click", function () {
+    document.body.classList.toggle("dark-mode");
+    console.log("Dark mode toggled!");
+  });
+}
